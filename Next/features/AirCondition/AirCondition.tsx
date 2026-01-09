@@ -46,7 +46,7 @@ export default function AirCondition({temperature, target_temp}: AirConditionPro
                             const res = await fetch("/api/updateTarget", { 
                                 method: "POST", 
                                 headers: { "Content-Type": "application/json", }, 
-                                body: JSON.stringify({ vehicle_id: process.env.TEST_VEHICLE_ID, target_temp: value, }), 
+                                body: JSON.stringify({ vehicle_id: process.env.NEXT_PUBLIC_TEST_VEHICLE_ID, target_temp: value, }), 
                             }); 
                             if (!res.ok) { 
                                 console.error("API error:", await res.text()); 

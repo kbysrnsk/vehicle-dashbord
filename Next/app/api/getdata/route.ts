@@ -2,7 +2,7 @@
 // import { NextResponse } from "next/server"
 
 export async function GET() {
-  const VehicleId = process.env.TEST_VEHICLE_ID;
+  const VehicleId = process.env.NEXT_PUBLIC_TEST_VEHICLE_ID;
   const res = await fetch(`http://localhost:8000/GetDashbordData/${VehicleId}`, {
     method: "Get", 
     cache: "no-store" 
