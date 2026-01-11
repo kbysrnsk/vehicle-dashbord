@@ -3,7 +3,8 @@
 
 export async function GET() {
   const VehicleId = process.env.NEXT_PUBLIC_TEST_VEHICLE_ID;
-  const res = await fetch(`http://localhost:8000/GetDashbordData/${VehicleId}`, {
+  const api = process.env.NEXT_PUBLIC_API_URL;
+  const res = await fetch(`${api}/GetDashbordData/${VehicleId}`, {
     method: "Get", 
     cache: "no-store" 
   });
